@@ -1,0 +1,11 @@
+dog = "firulais"
+dog
+"firulais"
+
+'use strict'; /*strict mode*/
+pet = 'dog';
+Uncaught ReferenceError: pet is not defined
+ 
+ var variables are scoped differently than let and const
+ * var variables are function scoped variables (only available inside the parent function)
+ * let and const are block scoped variables {}

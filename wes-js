@@ -43,7 +43,28 @@ Functions
 Params => placeholders
 Args => actual values
 
-function functionName(params){
+/* Function definition -> they are hoisted: "they are put at the top of the file", you can run a function before it
+is defined */
+function functionName(params = default){
 }
 
 functionName(args)
+/* The function will default back if the args are undefined */
+
+/* Function expression: store a function as a value in a variable -> function not hoisted, it only hoists the variable */
+const functionName = function(){
+ //
+}
+
+/* Arrow functions */
+const functionName = () => {
+ //
+}
+ 
+/* IIFE - Immediately invoked function expression */
+(functionName(){
+  //
+})();
+
+
+

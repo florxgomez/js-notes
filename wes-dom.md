@@ -42,4 +42,18 @@ It represents a web page loaded in the browser and serves as an entry point into
     const custom = document.querySelector('.custom')
     custom.dataset // DOMStringMap {name: flor}
     
+## Creating HTML
+
+    const myParagraph = document.createElement('p');
+    myParagraph.textContent = 'I am a p';
     
+    const myImage = document.createElement('img')
+    myImage.src = 'https://picsum.photos/500';
+    myImage.alt = 'Nice photo';
+    
+    const myDiv = document.createElement('div');
+    myDiv.classList.add('wrapper');
+    
+    myDiv.appendChild(myParagraph);
+    myDiv.appendChild(myImage);
+    document.body.appendChild(myDiv); // only one touch of the DOM

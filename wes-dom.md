@@ -57,3 +57,19 @@ It represents a web page loaded in the browser and serves as an entry point into
     myDiv.appendChild(myParagraph);
     myDiv.appendChild(myImage);
     document.body.appendChild(myDiv); // only one touch of the DOM
+
+## HTML from Strings and XSS (Cross-site scripting)
+
+    const item = document.querySelector('.item');
+    const myHTML = `
+      <div>
+        <h1> Hey how are ya?!</h1>
+      </div>
+      `; // this is just a string, not an element. It becomes an element when it is attached to the DOM by innerHTML
+    item.innerHTML = myHTML;
+    
+**Turn a string into a DOM element**
+
+    const myFragment = document.createRange().createContextualFragment(myHTML); // this creates a Range, which is a part of the HTML we    can work with, and then a document-fragment is created (an HTML element)
+
+    

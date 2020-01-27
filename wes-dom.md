@@ -70,6 +70,7 @@ It represents a web page loaded in the browser and serves as an entry point into
     
 **Turn a string into a DOM element**
 
-    const myFragment = document.createRange().createContextualFragment(myHTML); // this creates a Range, which is a part of the HTML we    can work with, and then a document-fragment is created (an HTML element)
+    const myFragment = document.createRange().createContextualFragment(myHTML); // this creates a Range, which is a part of the HTML we can work with, and then a document-fragment is created (an HTML element)
+    document.body.append(myHTML);
 
     

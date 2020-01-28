@@ -26,11 +26,11 @@
 * Symbol - for unique identifiers or properties
 * Object
 
-Escaping
+**Escaping**
 
     const sentence = 'she\'s so cool';
 
-Floating point math
+**Floating point math**
 
     window.location = `https://${0.1+0.2}.com`;
 

@@ -75,14 +75,15 @@ Be aware of XSS (Cross-site scripting)!
     document.body.appendChild(myFragment);
 ```
 ## Traversing 
-For elements:
+**For elements:**
 * children
 * firstElementChild
 * lastElementChild
 * previousElementChild
 * nextElementSibling
 * parentElement
-For Nodes:
+
+**For Nodes:**
 * childNodes
 * firstChild
 * lastChild

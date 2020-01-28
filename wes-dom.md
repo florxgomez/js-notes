@@ -58,7 +58,8 @@ It represents a web page loaded in the browser and serves as an entry point into
     myDiv.appendChild(myImage);
     document.body.appendChild(myDiv); // only one touch of the DOM
 ```
-## HTML from Strings and XSS (Cross-site scripting)
+## HTML from Strings
+Be aware of XSS (Cross-site scripting)!
 ```javascript
     const item = document.querySelector('.item');
     const myHTML = `
@@ -71,6 +72,23 @@ It represents a web page loaded in the browser and serves as an entry point into
 **Turn a string into a DOM element**
 ```javascript
     const myFragment = document.createRange().createContextualFragment(myHTML); // this creates a Range, which is a part of the HTML we can work with, and then a document-fragment is created (an HTML element)
-    document.body.append(myHTML);
+    document.body.appendChild(myFragment);
 ```
-    
+## Traversing 
+For elements:
+* children
+* firstElementChild
+* lastElementChild
+* previousElementChild
+* nextElementSibling
+* parentElement
+For Nodes:
+* childNodes
+* firstChild
+* lastChild
+* previousSibling
+* nextSibling
+* parentNode
+
+## Removing 
+    .remove()

@@ -3,10 +3,10 @@
 It represents a web page loaded in the browser and serves as an entry point into the page's content (the DOM)
 
 ## Selecting elements
-
+```javascript
     document.querySelector('p'); // first matchig 
     document.querySelectorAll('.item'); // all in a NodeList
-
+```
 ## Element properties and methods
 
     const heading = document.querySelector('h2');

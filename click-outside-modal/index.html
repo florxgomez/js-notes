@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <div class="cards">
+    <div class="card" data-description="Nice Picture">
+      <img src="https://picsum.photos/400?random=1" alt="Picture 1">
+      <h2>Picture 1</h2>
+      <button>Learn more →</button>
+    </div>
+    <div class="card" data-description="Wow!">
+      <img src="https://picsum.photos/400?random=2" alt="Picture 2">
+      <h2>Picture 2</h2>
+      <button>Learn more →</button>
+    </div>
+    <div class="card" data-description="Love it">
+      <img src="https://picsum.photos/400?random=3" alt="Picture 3">
+      <h2>Picture 3</h2>
+      <button>Learn more →</button>
+    </div>
+    <div class="card" data-description="Amazing">
+      <img src="https://picsum.photos/400?random=4" alt="Picture 4">
+      <h2>Picture 4</h2>
+      <button>Learn more →</button>
+    </div>
+
+  </div>
+
+  <div class="modal-outer">
+    <div class="modal-inner">
+      <p>My Modal</p>
+    </div>
+  </div>
+
+  <style>
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 20px;
+      padding: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 2px;
+    }
+
+    .card img {
+      width: 100%;
+    }
+
+    .card h2 {
+      color: black;
+    }
+
+    .modal-outer {
+      display: grid;
+      background: hsla(312, 100%, 50%, 0.7);
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      justify-content: center;
+      align-items: center;
+      /* Hide this modal until we need it */
+      opacity: 0;
+      pointer-events: none; /*ignore any events that come to it*/
+      transition: opacity 0.2s;
+    }
+
+    .modal-outer img {
+      width: 100%;
+    }
+
+    .modal-outer.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-inner {
+      max-width: 600px;
+      min-width: 400px;
+      padding: 2rem;
+      border-radius: 5px;
+      min-height: 200px;
+      background: white;
+      transform: translateY(-200%);
+      transition: transform 2s;
+    }
+
+    .modal-outer.open .modal-inner {
+      transform: translateY(0);
+    }
+  </style>
+  <script src="./click-outside.js"></script>
+</body>
+
+</html>

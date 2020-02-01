@@ -129,9 +129,8 @@ Variables are only available inside of the block where they have been declared
 * Funcion can be called before they've been declared (for function declarations)
 * JS hoists var declarations but not their value 
 ```javascript    
-    `console.log(age); // undefined`
-    
-    `var age = 10;`
+    console.log(age); // undefined
+    var age = 10;
 ```    
  ## Closures
  Access a parent level scope from a child scope, even after the parent function has even terminated

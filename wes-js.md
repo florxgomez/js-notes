@@ -1,5 +1,5 @@
 ## Variables
-
+```javascript
     dog = "firulais";
     dog;
     "firulais"
@@ -7,7 +7,7 @@
     'use strict'; /*strict mode*/
     pet = 'dog';
     Uncaught ReferenceError: pet is not defined
- 
+```
  var variables are scoped differently than let and const
  * **var** variables are function scoped variables (only available inside the parent function)
  * **let** and const are block scoped variables {}
@@ -27,21 +27,21 @@
 * Object
 
 **Escaping**
-
+```javascript
     const sentence = 'she\'s so cool';
-
+```
 **Floating point math**
-
+```javascript
     window.location = `https://${0.1+0.2}.com`;
-
+```
 === checks value and type are the same
-
+```javascript
     window.scrollTo({
       top: 100,
       left: 0,
       behavior: 'smooth'
     })
-
+```
 ## Functions
 
 Params => placeholders
@@ -49,35 +49,35 @@ Params => placeholders
 Args => actual values
 
 **Function definition** -> they are hoisted: "they are put at the top of the file", you can run a function before it is defined
-    
+```javascript   
     function functionName(params = default){
     }
 
     functionName(args)
     /* The function will default back if the args are undefined */
-
+```
 **Function expression**: store a function as a value in a variable -> function not hoisted, it only hoists the variable
-    
+ ```javascript   
     const functionName = function(){
     //
     }
-
+```
 **Arrow functions**
-
+```javascript
     const functionName = () => {
     //
     }
- 
+``` 
 **IIFE** - Immediately invoked function expression
-    
+```javascript    
     (functionName(){
      //
     })();
-
+```
 ## Debugging
 
 **Console Methods**
-
+```javascript
     console.log()
     console.error()
     console.warn()
@@ -85,7 +85,7 @@ Args => actual values
     console.count()
     console.group() - console.groupEnd()
     console.groupCollapsed()
-    
+```    
 **Grabbing elements**
 
 * $0 - in the console will show the first element that was selected
@@ -111,7 +111,7 @@ When variables are created inside of a function, those variables are available i
 Variables are only available inside of the block where they have been declared
 
 ## Scope lookup
-    
+```javascript   
     const dog = 'snickers';
     
     function logDog(dog){
@@ -123,19 +123,19 @@ Variables are only available inside of the block where they have been declared
       logDog();
     }
     go(); // 'snickers'
-    
+```    
 ## Hoisting
 
 * Funcion can be called before they've been declared (for function declarations)
 * JS hoists var declarations but not their value 
-    
+```javascript    
     `console.log(age); // undefined`
     
     `var age = 10;`
-    
+```    
  ## Closures
  Access a parent level scope from a child scope, even after the parent function has even terminated
- 
+```javascript 
     function createGame(gameName) {
         let score = 0; /* private variable for each game */
         return function win() {
@@ -146,3 +146,4 @@ Variables are only available inside of the block where they have been declared
 
       const hockeyGame = createGame('Hockey');
       const soccerGame = createGame('Soccer');
+```

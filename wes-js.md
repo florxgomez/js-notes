@@ -146,3 +146,13 @@ Variables are only available inside of the block where they have been declared
       const hockeyGame = createGame('Hockey');
       const soccerGame = createGame('Soccer');
 ```
+
+## BEDMAS
+* Brackets
+* Exponents -> 2 ** 2 = 4
+* Division
+* Multiplication
+* Addition
+* Substraction
+
+## Flow Control

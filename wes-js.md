@@ -156,3 +156,22 @@ Variables are only available inside of the block where they have been declared
 * Substraction
 
 ## Flow Control
+```javascript
+    function slugify(sentence, lowercase){
+        let slug = sentence.replace(/\s/g, '-');
+        if(lowercase){
+           return slug.toLowerCase();
+        }
+        //else
+        return slug;
+    }
+```
+
+## Falsy values
+* '' - empty strings
+* 0
+* undefined
+* null
+* NaN
+
+
